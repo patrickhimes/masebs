@@ -1,0 +1,41 @@
+#toggle-radio-button {
+    width: 32px;
+    height: 32px;
+	background: url('./svg/play-stop-buttons.svg') no-repeat gold;
+    background-size: 64px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    float: right;
+}
+#toggle-radio-button.playing{
+    background-position-x: 0px;
+}
+#toggle-radio-button.stopped{
+    background-position-x: 100%;
+}
+div.radio-player{ 
+    width:500px; 
+    height:165px; 
+    background:#000; 
+    color: #00CCFF;
+    font-size: 125%;
+    padding: 5px; 
+    margin: 0px auto; 
+}
+#visualizer_render{ 
+    width:466px; 
+    height:32px; 
+    background:#002D3C; 
+    float:left; 
+}
+div.radio-player > div.image {
+    float:left; 
+}
+#album-art {
+    width: 128px;
+    height: 128px;
+    padding-right: 5px;
+}

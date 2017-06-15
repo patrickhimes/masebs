@@ -1,0 +1,20 @@
+<div>
+    <h2>IceCAST Servers</h2>
+   <div>
+        <label>Name:</label> <input #serverName (keyup.enter)="add(serverName.value, serverURI.value); serverName.value=''; serverURI.value=''"/>
+        <label>URI:</label> <input #serverURI (keyup.enter)="add(serverName.value, serverURI.value); serverName.value=''; serverURI.value=''" />
+        <button (click)="add(serverName.value, serverURI.value); serverName.value=''; serverURI.value=''">
+            Add
+        </button>
+    </div>
+    <li class="servers" *ngFor="let icecastServer of icecastServers" 
+         (click)="onSelect(icecastServer)"
+        [class.selected]="icecastServer === selectedServer">
+        {{icecastServer.name}} | {{icecastServer.uri}} 
+        <div *ngIf="selectedServer?._id === icecastServer._id">
+            <button (click)="gotoDetail()">View Details</button>
+        </div>
+        <button class="delete"
+                (click)="delete(icecastServer); $event.stopPropagation()">x</button>
+    </li>
+</div>

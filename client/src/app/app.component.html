@@ -1,0 +1,18 @@
+<div class="container center">
+    <div class="jumbotron">
+        <div class ="header">
+            <h1>{{name}}</h1>
+            <p>
+            Ministry of Arcane Sciences: Emergency Broadcast System
+            </p> 
+        </div>
+        <nav>
+            <a routerLink="/radio" routerLinkActive="active">Radio</a>
+            <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </nav>
+        <router-outlet></router-outlet>
+        <div class="footer">
+        <a href="https://github.com/patrickhimes/streaming-radio" target="_blank">soure code</a>
+        </div>
+    </div>
+</div>
